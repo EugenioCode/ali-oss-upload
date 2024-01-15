@@ -34,10 +34,11 @@ export function activate(context: vscode.ExtensionContext) {
 			accessKeySecret: deleteSpace(accessKeySecret),
 			bucket: deleteSpace(bucket),
 		};
-		if(ossConfig.region !== '' || ossConfig.accessKeyId === '' || ossConfig.accessKeySecret === '' || ossConfig.bucket === '') {
+		console.log(ossConfig);
+		if(ossConfig.region === '' || ossConfig.accessKeyId === '' || ossConfig.accessKeySecret === '' || ossConfig.bucket === '') {
 			vscode.window.showInformationMessage('OSS配置不完整，请检查配置项', {modal: true}, '确认').then((btn: string | undefined) => {
 				if(btn === '确认') {
-					const uri = vscode.Uri.parse('vscode:settings/ali-oss-upload');
+					const uri = vscode.Uri.parse('vscode:settings/jianjunyang.ali-oss-upload');
 					vscode.commands.executeCommand('workbench.action.openSettings', uri);
 				}
 			});
