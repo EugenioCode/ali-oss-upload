@@ -2,7 +2,7 @@
   "name": "ali-oss-upload",
   "displayName": "ali-oss-upload",
   "description": "基于阿里云OSS上传图片的插件",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "jianjunyang",
   "repository": {
     "type": "git",
