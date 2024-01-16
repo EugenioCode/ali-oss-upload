@@ -33,13 +33,14 @@ function activate(context) {
         let accessKeyId = workspaceConfig.get('accessKeyId', '');
         let accessKeySecret = workspaceConfig.get('accessKeySecret', '');
         let bucket = workspaceConfig.get('bucket', '');
+        let formatType = workspaceConfig.get('formatType');
         const ossConfig = {
             region: (0, tools_1.deleteSpace)(region),
             accessKeyId: (0, tools_1.deleteSpace)(accessKeyId),
             accessKeySecret: (0, tools_1.deleteSpace)(accessKeySecret),
             bucket: (0, tools_1.deleteSpace)(bucket),
         };
-        console.log(ossConfig);
+        console.log(formatType);
         if (ossConfig.region === '' || ossConfig.accessKeyId === '' || ossConfig.accessKeySecret === '' || ossConfig.bucket === '') {
             vscode.window.showInformationMessage('OSS配置不完整，请检查配置项', { modal: true }, '确认').then((btn) => {
                 if (btn === '确认') {
@@ -71,7 +72,15 @@ function activate(context) {
                 else {
                     newUrl = data.url;
                 }
-                addImageToEditor(newUrl);
+                if (formatType === 'url') {
+                    addImageToEditor(newUrl);
+                }
+                if (formatType === 'markdown') {
+                    addImageToEditor(`![${name}](${newUrl})`);
+                }
+                if (formatType === 'html') {
+                    addImageToEditor(`<img src="${newUrl}" alt="${name}">`);
+                }
             }
         }
     });

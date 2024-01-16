@@ -69,6 +69,12 @@
             "type": "string",
             "default": "",
             "description": "保存路径"
+          },
+          "upload_oss_config.formatType": {
+            "type": "string",
+            "enum": ["url", "markdown","html"],
+            "default": "url",
+            "description": "图片输出格式"
           }
         }
       }
