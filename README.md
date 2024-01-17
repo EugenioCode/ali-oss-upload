@@ -1,17 +1,26 @@
-# 在vscode 里面 搜索 ali-oss-upload 安装插件
+# 图片上传阿里云OSS插件
 
-# 使用方式
+## 使用插件
+插件安装后，会在右键菜单中新增一个 <选择图片>的选项，图片上传成功成功后会回写数据。
+![1280X1280](https://oss.bytespace.site/uPic/1280X1280.PNG)
+插件目前支持回写url、markdown、html三种形式的数据。
+- url数据输出
 
-- 插件配置
+  ![url](https://oss.bytespace.site/uPic/url.gif)
 
-![iShot_2024-01-11_17.35.20](https://oss.bytespace.site/uPic/iShot_2024-01-11_17.35.20.png)
-`AccessKeyId`、`AccessKeySecret`、`Bucket`、`Region` 为必填参数
+- markdown数据输出
 
-`Host Name`、`Oss Save Path` 为选填参数
+  ![markdown](https://oss.bytespace.site/uPic/markdown.gif)
 
-- 插件使用
+- html格式
 
-![ali-oss-upload](https://oss.bytespace.site/uPic/ali-oss-upload.gif)
+  ![html](https://oss.bytespace.site/uPic/html.gif)
 
+## 插件配置
+必填参数
+`AccessKeyId`、`AccessKeySecret`、`Bucket`、`Region` 
+选填参数
+`Host Name`、`Oss Save Path `
 
+  ![setting](https://oss.bytespace.site/uPic/setting.png)
 
