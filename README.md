@@ -17,10 +17,13 @@
   ![html](https://oss.bytespace.site/uPic/html.gif)
 
 ## 插件配置
-必填参数
-`AccessKeyId`、`AccessKeySecret`、`Bucket`、`Region` 
-选填参数
-`Host Name`、`Oss Save Path `
+- 必填参数
+
+  `AccessKeyId`、`AccessKeySecret`、`Bucket`、`Region` 
+  
+- 选填参数
+
+  `Host Name`、`Oss Save Path `
 
   ![setting](https://oss.bytespace.site/uPic/setting.png)
 
